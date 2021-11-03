@@ -1,0 +1,253 @@
+<html>
+<head>  
+
+
+    <script type="text/javascript">
+</script>
+
+</head>
+<body class="body_backgorund">
+
+<div>
+<h1>Paint</h1>
+
+    <canvas id="myCanvas" width="800" height="400"></canvas>
+        <br>
+        <br>
+
+<span>
+        <span>Radius - </span>  
+        <input type="text" id="radius" value=>&nbsp;
+
+        <span>Color - </span>  
+        <input type="text" id="color" value="">&nbsp;
+        
+        <span>Width Of the line  - </span>  
+        <input type="text" id="width_of_line" value="">
+        <br>
+        <br>
+        <div class="css-button" id="tooltip">
+            <p class="css-button-text">Clear Canvas</p>
+            <div class="css-button-inner">
+              <div class="reset-skew">
+                <p class="css-button-inner-text">Are you sure?</p>
+              </div>
+            </div>
+          </div>
+          <text>also , The button animation is not mine , just wanted to use it for fun</text>
+        </span>
+
+    </div>
+
+</body>
+<style>
+
+    .body_backgorund {
+  background-color:black;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+body{
+  cursor: pointer;
+}
+h1
+{
+    color: red; 
+    font-size: 40px;
+}
+#myCanvas
+{
+    border-width:10px;
+    background-color: white; 
+    border-style:ridge;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 42px;
+  font-size: 16px;
+}
+
+input
+{
+  margin-right: 20px;
+}
+
+body {
+  font-family: Arial;
+  text-align: center;
+  padding-top: 100px;
+  background-color: #232323;
+}
+
+.css-button {
+  border: 1px solid #d5402b;
+  height: 51px;
+  width: 218px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff;
+}
+
+p.css-button-text {
+  width: 100%;
+  position: absolute;
+}
+
+.css-button-inner {
+  height: 51px;
+  width: 265px;
+  position: relative;
+  left: -4px;
+  top: -1px;
+  border: 1px solid #d5402b;
+  background-color: #d5402b;
+  text-align: center;
+  -webkit-transform: skew(-42deg) translate(300px,0);
+  -moz-transform: skew(-42deg) translate(300px,0);
+  -o-transform: skew(-42deg) translate(300px,0);
+  transform: skew(-42deg) translate(300px,0);
+  -webkit-animation-name: buttonx-out;
+  -webkit-animation-duration: .7s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-animation-name: buttonx-out;
+  -moz-animation-duration: .7s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-name: buttonx-out;
+  animation-duration: .7s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reset-skew {
+  -moz-transform: skew(40deg);
+  -o-transform: skew(40deg);
+  transform: skew(40deg);
+}
+
+.css-button:hover > .css-button-inner {
+  -webkit-animation-name: buttonx-in;
+  -webkit-animation-duration: .6s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-animation-name: buttonx-in;
+  -moz-animation-duration: .6s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-name: buttonx-in;
+  animation-duration: .6s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transform: skew(-42deg) translate(-20px, -0px);
+  -o-transform: skew(-42deg) translate(-20px, -0px);
+  transform: skew(-42deg) translate(-20px, -0px);
+}
+
+@keyframes buttonx-in {
+    from {transform:skew(-42deg) translate(-300px, 0);}
+    to {transform:skew(-42deg) translate(-20px, -0px);}    
+}
+
+@keyframes buttonx-out {
+    from {transform: skew(-42deg) translate(0, 0);}
+    to {transform: skew(-42deg) translate(300px, -0px);}
+}
+
+@-webkit-keyframes buttonx-in {
+    from {transform:skew(-42deg) translate(-300px, 0);}
+    to {transform:skew(-42deg) translate(-20px, -0px);}    
+}
+
+@-webkit-keyframes buttonx-out {
+    from {transform: skew(-42deg) translate(0, 0);}
+    to {transform: skew(-42deg) translate(300px, -0px);}
+}
+
+h1{
+    
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+text{
+    color:red;
+}
+
+</style>
+
+<script>
+    var mouseEvent = "empty";
+
+
+canvas = document.getElementById('myCanvas');
+ctx = canvas.getContext("2d");
+
+color = "black";
+width_of_line = 2;
+canvas.addEventListener("mousedown", my_mousedown);
+
+function my_mousedown(e)
+{
+
+    color = document.getElementById("color").value;
+    width_of_line = document.getElementById("width_of_line").value;
+    radius = document.getElementById("radius").value;
+    mouseEvent = "mouseDown";
+}
+
+canvas.addEventListener("mousemove", my_mousemove);
+function my_mousemove(e)
+{
+    current_position_of_mouse_x = e.clientX - canvas.offsetLeft;
+    current_position_of_mouse_y = e.clientY - canvas.offsetTop;
+
+    if (mouseEvent == "mouseDown") {
+    console.log("Current position of x and y coordinates = ");
+    console.log("x  = " + current_position_of_mouse_x + "y = " + current_position_of_mouse_y);
+    ctx.beginPath();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width_of_line;
+    ctx.arc(current_position_of_mouse_x, current_position_of_mouse_y, radius ,0 , 2 * Math.PI);
+    ctx.stroke();
+    }
+
+}
+
+canvas.addEventListener("mouseup", my_mouseup);
+function my_mouseup(e)
+{
+    mouseEvent = "mouseUP";
+}
+
+canvas.addEventListener("mouseleave", my_mouseleave);
+function my_mouseleave(e)
+{
+    mouseEvent = "mouseleave";
+}
+
+
+function clearArea() {
+ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+}
+</script>
+  
+</html>
